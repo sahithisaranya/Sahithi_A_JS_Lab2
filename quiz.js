@@ -36,19 +36,13 @@ function QuizApplication(questionAndAnswer){
     let score=0;
     let pageNum=0;
 
-    //this.questionAndAnswer=questionAndAnswer;
-
-    
-
     //function to display starting page.
     //this sets score to 0 and page number to 0
     //calls initial title, qa and progress sections
     const displayStartPage=function(){
         score=0;
         pageNum=0;
-        //this.displayTitleSection("JavaScript");
         displayQASection();
-        //this.addEventListeners();
         displayProgessSection();
     }
 
@@ -58,9 +52,6 @@ function QuizApplication(questionAndAnswer){
         addEventListeners();
         displayProgessSection();
     }
-    // this.displayTitleSection=function(titleStr){
-    
-    // }
 
     const displayQASection=function(){
         const questionHTMLElement=document.getElementById("question");
@@ -94,7 +85,7 @@ function QuizApplication(questionAndAnswer){
         }
     }
 
-    addEventListeners=function(){
+    const addEventListeners=function(){
         const qaObj=questionAndAnswer;
         for(let i=0;i<qaObj.answersChoicesArr[pageNum].length;i++){
             const answerBtnHTMLElement=document.getElementById("btn"+i);
